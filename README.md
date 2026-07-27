@@ -74,11 +74,7 @@ images/screenshot.png
 GitHub Pages:
 
 ```
-https://YOUR_USERNAME.github.io/Web-Projects/02-Tribute-Page/
-```
-
-Replace **YOUR_USERNAME** with your GitHub username.
-
+https://rishyandhark-sudo.github.io/web-dev-projects/
 ---
 
 ## 👨‍💻 Author
