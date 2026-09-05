@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment — CarePlus Hospital</title>
+<meta name="description" content="Book an appointment with a CarePlus Hospital specialist online in under two minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>
+      CarePlus Hospital
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="departments.html">Departments</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="appointment.html" class="btn btn-primary btn-sm">Book Appointment</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel">
+    <a href="index.html">Home</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="departments.html">Departments</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#about">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-tag">Book a Visit</span>
+    <h1>Schedule your appointment</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span>Appointment</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="appointment-layout">
+
+      <form class="form-card reveal" id="appointmentForm" novalidate>
+        <h3>Patient & Appointment Details</h3>
+        <p style="margin-bottom:28px">Fields marked with <span class="req">*</span> are required.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="req">*</span></label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Jane Doe">
+            <span class="field-error">This field is required.</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="jane@example.com">
+            <span class="field-error">This field is required.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+            <span class="field-error">This field is required.</span>
+          </div>
+          <div class="form-group">
+            <label for="department">Department <span class="req">*</span></label>
+            <select id="department" name="department" required>
+              <option value="">Select a department</option>
+              <option>Cardiology</option>
+              <option>Neurology</option>
+              <option>Orthopedics</option>
+              <option>Pediatrics</option>
+              <option>Dermatology</option>
+              <option>Gynecology</option>
+              <option>Oncology</option>
+              <option>General Medicine</option>
+            </select>
+            <span class="field-error">This field is required.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="doctor">Preferred Doctor</label>
+            <select id="doctor" name="doctor">
+              <option value="">No preference</option>
+              <option>Dr. Sarah Mitchell — Cardiologist</option>
+              <option>Dr. Raj Kapoor — Neurologist</option>
+              <option>Dr. Emily Chen — Pediatrician</option>
+              <option>Dr. David Osei — Orthopedic Surgeon</option>
+              <option>Dr. Laura Bennett — Dermatologist</option>
+              <option>Dr. Fatima Al-Sayed — Gynecologist</option>
+              <option>Dr. Michael Torres — Oncologist</option>
+              <option>Dr. Grace Adeyemi — General Physician</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="appointmentDate">Appointment Date <span class="req">*</span></label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+            <span class="field-error">This field is required.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="time">Preferred Time <span class="req">*</span></label>
+            <select id="time" name="time" required>
+              <option value="">Select a time slot</option>
+              <option>9:00 AM – 10:00 AM</option>
+              <option>10:00 AM – 11:00 AM</option>
+              <option>11:00 AM – 12:00 PM</option>
+              <option>2:00 PM – 3:00 PM</option>
+              <option>3:00 PM – 4:00 PM</option>
+              <option>4:00 PM – 5:00 PM</option>
+            </select>
+            <span class="field-error">This field is required.</span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (optional)</label>
+            <input type="text" id="message" name="message" placeholder="Anything we should know?">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Confirm Appointment</button>
+      </form>
+
+      <div class="info-card reveal">
+        <h3>Need help booking?</h3>
+        <p style="color:rgba(255,255,255,0.85)">Our care coordinators can help you choose the right department or doctor.</p>
+        <ul>
+          <li>
+            <span class="ic"><i class="fa-solid fa-phone"></i></span>
+            <div><small>Call us</small><strong>(555) 010-2200</strong></div>
+          </li>
+          <li>
+            <span class="ic"><i class="fa-solid fa-envelope"></i></span>
+            <div><small>Email us</small><strong>care@careplushospital.com</strong></div>
+          </li>
+          <li>
+            <span class="ic"><i class="fa-solid fa-clock"></i></span>
+            <div><small>Booking desk hours</small><strong>Mon–Sat, 8:00 AM – 8:00 PM</strong></div>
+          </li>
+          <li>
+            <span class="ic"><i class="fa-solid fa-truck-medical"></i></span>
+            <div><small>Emergencies</small><strong>Call (555) 911-0000 directly</strong></div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>
+          CarePlus Hospital
+        </a>
+        <p>Compassionate, modern healthcare with specialists you can trust — available whenever you need us.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="departments.html">Departments</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Departments</h5>
+        <ul>
+          <li><a href="departments.html#cardiology">Cardiology</a></li>
+          <li><a href="departments.html#neurology">Neurology</a></li>
+          <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+          <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+          <li><a href="departments.html#oncology">Oncology</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> 482 Wellness Avenue, Springfield</li>
+          <li><i class="fa-solid fa-phone"></i> (555) 010-2200</li>
+          <li><i class="fa-solid fa-envelope"></i> care@careplushospital.com</li>
+        </ul>
+        <div class="footer-emergency">
+          <span style="font-size:0.78rem">Emergency Hotline</span>
+          <strong>(555) 911-0000</strong>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 CarePlus Hospital. All rights reserved.</span>
+      <span>Designed for better health outcomes.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

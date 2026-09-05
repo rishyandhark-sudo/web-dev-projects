@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Doctors — CarePlus Hospital</title>
+<meta name="description" content="Browse and search CarePlus Hospital's specialist doctors by name or specialization, and book an appointment online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>
+      CarePlus Hospital
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="departments.html">Departments</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="appointment.html" class="btn btn-primary btn-sm">Book Appointment</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel">
+    <a href="index.html">Home</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="departments.html">Departments</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#about">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-tag">Our Team</span>
+    <h1>Find the right specialist for you</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span>Doctors</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="doctor-toolbar reveal">
+      <div class="search-field">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="doctorSearch" placeholder="Search doctors by name...">
+      </div>
+      <select class="filter-select" id="specFilter">
+        <option value="all">All Specializations</option>
+        <option value="cardiology">Cardiology</option>
+        <option value="neurology">Neurology</option>
+        <option value="pediatrics">Pediatrics</option>
+        <option value="orthopedics">Orthopedics</option>
+        <option value="dermatology">Dermatology</option>
+        <option value="gynecology">Gynecology</option>
+        <option value="oncology">Oncology</option>
+        <option value="general">General Medicine</option>
+      </select>
+    </div>
+
+    <div class="doctor-grid reveal">
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Sarah Mitchell" data-spec="cardiology">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#6C4AB6,#432A75)">SM</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Sarah Mitchell</h4>
+          <span class="doctor-spec">Cardiologist</span>
+          <div class="doctor-meta-row"><span>14 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.9</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Raj Kapoor" data-spec="neurology">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#8A6FCB,#432A75)">RK</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Raj Kapoor</h4>
+          <span class="doctor-spec">Neurologist</span>
+          <div class="doctor-meta-row"><span>18 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.8</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Emily Chen" data-spec="pediatrics">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#6C4AB6,#8A6FCB)">EC</div>
+          <span class="doctor-status busy"><span class="dot"></span>Booked Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Emily Chen</h4>
+          <span class="doctor-spec">Pediatrician</span>
+          <div class="doctor-meta-row"><span>10 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 5.0</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. David Osei" data-spec="orthopedics">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#432A75,#6C4AB6)">DO</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. David Osei</h4>
+          <span class="doctor-spec">Orthopedic Surgeon</span>
+          <div class="doctor-meta-row"><span>16 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.7</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Laura Bennett" data-spec="dermatology">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#8A6FCB,#6C4AB6)">LB</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Laura Bennett</h4>
+          <span class="doctor-spec">Dermatologist</span>
+          <div class="doctor-meta-row"><span>9 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.6</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Fatima Al-Sayed" data-spec="gynecology">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#6C4AB6,#432A75)">FA</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Fatima Al-Sayed</h4>
+          <span class="doctor-spec">Gynecologist</span>
+          <div class="doctor-meta-row"><span>13 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.9</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Michael Torres" data-spec="oncology">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#432A75,#8A6FCB)">MT</div>
+          <span class="doctor-status busy"><span class="dot"></span>Booked Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Michael Torres</h4>
+          <span class="doctor-spec">Oncologist</span>
+          <div class="doctor-meta-row"><span>20 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.8</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Grace Adeyemi" data-spec="general">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#6C4AB6,#8A6FCB)">GA</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Grace Adeyemi</h4>
+          <span class="doctor-spec">General Physician</span>
+          <div class="doctor-meta-row"><span>11 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.7</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Daniel Kim" data-spec="cardiology">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#8A6FCB,#432A75)">DK</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Daniel Kim</h4>
+          <span class="doctor-spec">Cardiologist</span>
+          <div class="doctor-meta-row"><span>12 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.6</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Olivia Martins" data-spec="neurology">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#6C4AB6,#432A75)">OM</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Olivia Martins</h4>
+          <span class="doctor-spec">Neurologist</span>
+          <div class="doctor-meta-row"><span>8 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.5</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Henry Okafor" data-spec="orthopedics">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#432A75,#6C4AB6)">HO</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Henry Okafor</h4>
+          <span class="doctor-spec">Orthopedic Surgeon</span>
+          <div class="doctor-meta-row"><span>15 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.7</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-doctor-card data-name="Dr. Nina Petrova" data-spec="pediatrics">
+        <div class="doctor-photo">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#8A6FCB,#6C4AB6)">NP</div>
+          <span class="doctor-status"><span class="dot"></span>Available Today</span>
+        </div>
+        <div class="doctor-body">
+          <h4>Dr. Nina Petrova</h4>
+          <span class="doctor-spec">Pediatrician</span>
+          <div class="doctor-meta-row"><span>7 yrs experience</span><span class="doctor-rating"><i class="fa-solid fa-star"></i> 4.6</span></div>
+          <div class="doctor-actions">
+            <a href="#" class="btn btn-outline">View Profile</a>
+            <a href="appointment.html" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="no-results">
+      <i class="fa-solid fa-user-doctor" style="font-size:2rem;color:var(--purple);margin-bottom:14px;display:block"></i>
+      No doctors match your search. Try a different name or specialization.
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>
+          CarePlus Hospital
+        </a>
+        <p>Compassionate, modern healthcare with specialists you can trust — available whenever you need us.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="departments.html">Departments</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Departments</h5>
+        <ul>
+          <li><a href="departments.html#cardiology">Cardiology</a></li>
+          <li><a href="departments.html#neurology">Neurology</a></li>
+          <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+          <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+          <li><a href="departments.html#oncology">Oncology</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> 482 Wellness Avenue, Springfield</li>
+          <li><i class="fa-solid fa-phone"></i> (555) 010-2200</li>
+          <li><i class="fa-solid fa-envelope"></i> care@careplushospital.com</li>
+        </ul>
+        <div class="footer-emergency">
+          <span style="font-size:0.78rem">Emergency Hotline</span>
+          <strong>(555) 911-0000</strong>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 CarePlus Hospital. All rights reserved.</span>
+      <span>Designed for better health outcomes.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
