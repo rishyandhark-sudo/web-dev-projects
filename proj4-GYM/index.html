@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PULSE FITNESS — Train Different</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="#home" class="logo">PULSE<span>FITNESS</span></a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#classes">Classes</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#contact">Contact</a>
+      <a href="#pricing" class="btn btn-cta nav-cta">Join Now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow">VR SIDDHARTHA ROAD, KANURU · OPEN 24/7</p>
+    <h1>PUSH YOUR LIMITS.<br>BUILD YOUR <span class="hl">LEGACY.</span></h1>
+    <p class="hero-tagline">Strength isn't given, it's forged. Join a community of lifters, fighters and finishers who show up when it's hard — and leave stronger every single time.</p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn btn-primary">Get Started</a>
+      <a href="#classes" class="btn btn-outline">View Schedule</a>
+    </div>
+  </div>
+  <div class="hero-pulse" aria-hidden="true">
+    <svg viewBox="0 0 600 60" preserveAspectRatio="none">
+      <polyline points="0,30 90,30 110,10 130,50 150,5 170,55 190,30 260,30 280,15 300,45 320,30 600,30" />
+    </svg>
+  </div>
+</section>
+
+<div class="pulse-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+    <polyline points="0,20 160,20 190,4 220,36 250,20 400,20 430,8 460,32 490,20 1200,20" />
+  </svg>
+</div>
+
+<!-- ============ FEATURES ============ -->
+<section id="about" class="features">
+  <div class="section-head">
+    <p class="eyebrow">WHY PULSE</p>
+    <h2>Everything you need. Nothing you don't.</h2>
+  </div>
+  <div class="feature-grid">
+    <article class="feature-card">
+      <div class="feature-icon">⏱</div>
+      <h3>24/7 Access</h3>
+      <p>Train at 5am or midnight. Your schedule isn't ours to dictate — keycard entry, always open.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-icon">🏆</div>
+      <h3>Certified Trainers</h3>
+      <p>Every coach on our floor is nationally certified and personally invested in your progress.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-icon">⚙</div>
+      <h3>Modern Equipment</h3>
+      <p>Commercial-grade racks, plate-loaded machines, and a fully stocked free-weight arena.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-icon">📋</div>
+      <h3>Personalized Plans</h3>
+      <p>No cookie-cutter programs. Your goals, your body, your custom roadmap to results.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CLASSES ============ -->
+<section id="classes" class="classes">
+  <div class="section-head">
+    <p class="eyebrow">THE PROGRAMS</p>
+    <h2>Classes built to break plateaus</h2>
+  </div>
+  <div class="class-grid">
+
+    <article class="class-card">
+      <div class="class-img" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80');">
+        <span class="badge">MON · WED · FRI — 6:00 AM</span>
+      </div>
+      <div class="class-body">
+        <h3>Bodybuilding</h3>
+        <p>Hypertrophy-focused splits with progressive overload to build raw, sculpted mass.</p>
+      </div>
+    </article>
+
+    <article class="class-card">
+      <div class="class-img" style="background-image:url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=800&q=80');">
+        <span class="badge">DAILY — 7:00 PM</span>
+      </div>
+      <div class="class-body">
+        <h3>HIIT &amp; Cardio</h3>
+        <p>High-intensity intervals engineered to torch fat and skyrocket your conditioning.</p>
+      </div>
+    </article>
+
+    <article class="class-card">
+      <div class="class-img" style="background-image:url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80');">
+        <span class="badge">TUE · THU — 8:00 AM</span>
+      </div>
+      <div class="class-body">
+        <h3>Yoga &amp; Flexibility</h3>
+        <p>Restore mobility, calm the mind, and protect your gains with active recovery.</p>
+      </div>
+    </article>
+
+    <article class="class-card">
+      <div class="class-img" style="background-image:url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80');">
+        <span class="badge">SAT — 10:00 AM</span>
+      </div>
+      <div class="class-body">
+        <h3>Boxing</h3>
+        <p>Bag work, pad drills and footwork — build power, speed and fight-ready reflexes.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="pulse-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+    <polyline points="0,20 160,20 190,4 220,36 250,20 400,20 430,8 460,32 490,20 1200,20" />
+  </svg>
+</div>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing" class="pricing">
+  <div class="section-head">
+    <p class="eyebrow">MEMBERSHIP</p>
+    <h2>Pick your intensity</h2>
+  </div>
+  <div class="pricing-grid">
+
+    <article class="price-card">
+      <h3>Basic</h3>
+      <p class="price"><span class="currency">₹</span>999<span class="period">/mo</span></p>
+      <p class="plan-desc">For the self-starter who just needs the floor.</p>
+      <ul class="plan-features">
+        <li>✔ Gym floor access</li>
+        <li>✔ Locker room access</li>
+        <li>✔ 1 free fitness assessment</li>
+        <li class="off">✘ Group classes</li>
+        <li class="off">✘ Personal training</li>
+      </ul>
+      <a href="#contact" class="btn btn-outline plan-btn">Select Plan</a>
+    </article>
+
+    <article class="price-card popular">
+      <span class="popular-tag">Most Popular</span>
+      <h3>Pro</h3>
+      <p class="price"><span class="currency">₹</span>1,999<span class="period">/mo</span></p>
+      <p class="plan-desc">Full access for members who train to win.</p>
+      <ul class="plan-features">
+        <li>✔ 24/7 gym access</li>
+        <li>✔ Unlimited group classes</li>
+        <li>✔ Monthly progress tracking</li>
+        <li>✔ 2 personal training sessions</li>
+        <li class="off">✘ Nutrition coaching</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary plan-btn">Select Plan</a>
+    </article>
+
+    <article class="price-card">
+      <h3>Elite</h3>
+      <p class="price"><span class="currency">₹</span>3,499<span class="period">/mo</span></p>
+      <p class="plan-desc">The complete transformation package.</p>
+      <ul class="plan-features">
+        <li>✔ 24/7 priority access</li>
+        <li>✔ Unlimited group classes</li>
+        <li>✔ Weekly personal training</li>
+        <li>✔ Custom nutrition coaching</li>
+        <li>✔ Guest passes ×4/mo</li>
+      </ul>
+      <a href="#contact" class="btn btn-outline plan-btn">Select Plan</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ TRAINERS ============ -->
+<section id="trainers" class="trainers">
+  <div class="section-head">
+    <p class="eyebrow">THE COACHES</p>
+    <h2>Trained by people who've been there</h2>
+  </div>
+  <div class="trainer-grid">
+
+    <article class="trainer-card">
+      <div class="trainer-photo" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80');"></div>
+      <h3>Arjun Reddy</h3>
+      <p class="specialty">Strength &amp; Powerlifting</p>
+      <div class="socials">
+        <span class="social-icon" aria-label="Instagram">IG</span>
+        <span class="social-icon" aria-label="Twitter">TW</span>
+        <span class="social-icon" aria-label="LinkedIn">IN</span>
+      </div>
+    </article>
+
+    <article class="trainer-card">
+      <div class="trainer-photo" style="background-image:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80');"></div>
+      <h3>Meera Nair</h3>
+      <p class="specialty">HIIT &amp; Conditioning</p>
+      <div class="socials">
+        <span class="social-icon" aria-label="Instagram">IG</span>
+        <span class="social-icon" aria-label="Twitter">TW</span>
+        <span class="social-icon" aria-label="LinkedIn">IN</span>
+      </div>
+    </article>
+
+    <article class="trainer-card">
+      <div class="trainer-photo" style="background-image:url('https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=600&q=80');"></div>
+      <h3>Vikram Singh</h3>
+      <p class="specialty">Boxing &amp; Combat Fitness</p>
+      <div class="socials">
+        <span class="social-icon" aria-label="Instagram">IG</span>
+        <span class="social-icon" aria-label="Twitter">TW</span>
+        <span class="social-icon" aria-label="LinkedIn">IN</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="site-footer">
+  <div class="footer-grid">
+
+    <div class="footer-col">
+      <a href="#home" class="logo">PULSE<span>FITNESS</span></a>
+      <p>MG Road, Kanuru<br>Vijayawada, Andhra Pradesh 520007</p>
+      <p class="hours"><strong>Mon – Sat:</strong> Open 24 hours<br><strong>Sunday:</strong> 6:00 AM – 8:00 PM</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#classes">Classes</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#trainers">Trainers</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get In Touch</h4>
+      <a href="tel:+911234567890">+91 12345 67890</a>
+      <a href="mailto:hello@pulsefitness.in">hello@pulsefitness.in</a>
+    </div>
+
+    <div class="footer-col newsletter">
+      <h4>Stay In The Loop</h4>
+      <p>Workout tips &amp; member offers, once a week.</p>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Pulse Fitness. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

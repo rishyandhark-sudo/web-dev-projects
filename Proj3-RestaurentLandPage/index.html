@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fornace — Wood-Fired Italian, Since the First Flame</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="site-header">
+  <div class="container nav-row">
+    <a href="#" class="logo">FOR<span>NA</span>CE</a>
+    <div class="navlinks">
+      <nav id="site-nav">
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn btn-primary">Reserve a Table</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <canvas id="ember-canvas"></canvas>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow">Wood-Fired Italian — Est. First Flame</span>
+      <h1>Where Flame<br>Becomes <em>Flavore.</em></h1>
+      <p>Live-oak embers, hand-milled flour, and produce pulled that morning from three local farms. Every plate at Fornace passes through fire before it reaches your table.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Book a Table</a>
+        <a href="#menu" class="btn btn-outline">View Full Menu</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="line"></span>Scroll</div>
+</section>
+
+<svg class="divider" viewBox="0 0 1200 34" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,34 L0,14 L40,26 L82,6 L124,22 L166,10 L208,28 L250,14 L292,24 L334,8 L376,20 L418,12 L460,26 L502,16 L544,24 L586,10 L628,22 L670,14 L712,26 L754,8 L796,20 L838,12 L880,24 L922,16 L964,28 L1006,10 L1048,22 L1090,14 L1132,26 L1174,12 L1200,20 L1200,34 Z"></path>
+  <circle cx="82" cy="6" r="2.2"></circle>
+  <circle cx="334" cy="8" r="1.6"></circle>
+  <circle cx="586" cy="10" r="2"></circle>
+  <circle cx="838" cy="12" r="1.6"></circle>
+  <circle cx="1090" cy="14" r="2.2"></circle>
+</svg>
+
+<!-- ================= MENU HIGHLIGHTS ================= -->
+<section id="menu">
+  <div class="container">
+    <div class="menu-head">
+      <div>
+        <span class="eyebrow">The Ticket</span>
+        <h2>Tonight's Fire</h2>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="antipasti">Antipasti</button>
+        <button class="tab" data-tab="forno">Dal Forno</button>
+        <button class="tab" data-tab="dolci">Dolci</button>
+      </div>
+    </div>
+
+    <div class="dish-panel active" id="antipasti">
+      <article class="dish">
+        <div class="dish-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Charred octopus with white bean puree"></div>
+        <div class="dish-body">
+          <div class="dish-top"><h3>Polpo alla Brace</h3><span class="dish-price">$24</span></div>
+          <p>Ember-charred octopus over smoked white bean purée, salsa verde, Calabrian chili oil.</p>
+          <div class="stamps"><span class="stamp">GF</span></div>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-img"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80" alt="Burrata with roasted tomatoes"></div>
+        <div class="dish-body">
+          <div class="dish-top"><h3>Burrata Affumicata</h3><span class="dish-price">$19</span></div>
+          <p>Smoked burrata, live-fire tomatoes, basil oil, grilled sourdough from our hearth.</p>
+          <div class="stamps"><span class="stamp">VG</span></div>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Wood fired flatbread starter"></div>
+        <div class="dish-body">
+          <div class="dish-top"><h3>Focaccia del Fuoco</h3><span class="dish-price">$14</span></div>
+          <p>Hearth-baked focaccia, whipped 'nduja butter, rosemary salt, honeycomb drizzle.</p>
+          <div class="stamps"><span class="stamp">VG</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="dish-panel" id="forno">
+      <article class="dish">
+        <div class="dish-img"><img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&w=800&q=80" alt="Wood fired ribeye steak"></div>
+        <div class="dish-body">
+          <div class="dish-top"><h3>Bistecca al Forno</h3><span class="dish-price">$58</span></div>
+          <p>32-day dry-aged ribeye, hearth-roasted over live oak, rosemary jus, charred lemon.</p>
+          <div class="stamps"><span class="stamp">GF</span></div>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-img"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Wood fired margherita pizza"></div>
+        <div class="dish-body">
+          <div class="dish-top"><h3>Margherita del Fuoco</h3><span class="dish-price">$22</span></div>
+          <p>San Marzano tomato, fior di latte, torn basil, 90-second blister in the wood oven.</p>
+          <div class="stamps"><span class="stamp">VG</span></div>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-img"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Hand rolled pasta dish"></div>
+        <div class="dish-body">
+          <div class="dish-top"><h3>Tagliatelle al Tartufo</h3><span class="dish-price">$34</span></div>
+          <p>Hand-rolled tagliatelle, brown butter, shaved black truffle, aged parmigiano.</p>
+          <div class="stamps"><span class="stamp">VG</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="dish-panel" id="dolci">
+      <article class="dish">
+        <div class="dish-img"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80" alt="Tiramisu dessert"></div>
+        <div class="dish-body">
+          <div class="dish-top"><h3>Tiramisu al Forno</h3><span class="dish-price">$14</span></div>
+          <p>Espresso-soaked ladyfingers, mascarpone cream, hearth-toasted cocoa nib crunch.</p>
+          <div class="stamps"><span class="stamp">VG</span></div>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-img"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" alt="Panna cotta dessert"></div>
+        <div class="dish-body">
+          <div class="dish-top"><h3>Panna Cotta Affumicata</h3><span class="dish-price">$13</span></div>
+          <p>Smoked vanilla panna cotta, charred fig compote, torched honey.</p>
+          <div class="stamps"><span class="stamp">GF</span></div>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-img"><img src="https://images.unsplash.com/photo-1611329695518-1763fc1cee6f?auto=format&fit=crop&w=800&q=80" alt="Affogato dessert"></div>
+        <div class="dish-body">
+          <div class="dish-top"><h3>Affogato al Forno</h3><span class="dish-price">$11</span></div>
+          <p>Hazelnut gelato drowned in hearth-pulled espresso, cocoa nib dust.</p>
+          <div class="stamps"><span class="stamp">GF</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1200 34" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,0 L0,20 L42,8 L84,28 L126,12 L168,24 L210,6 L252,20 L294,10 L336,26 L378,14 L420,22 L462,8 L504,24 L546,12 L588,20 L630,6 L672,26 L714,14 L756,22 L798,8 L840,20 L882,10 L924,24 L966,12 L1008,22 L1050,8 L1092,24 L1134,10 L1200,18 L1200,0 Z"></path>
+  <circle cx="126" cy="12" r="2"></circle>
+  <circle cx="378" cy="14" r="1.6"></circle>
+  <circle cx="630" cy="6" r="2.2"></circle>
+  <circle cx="882" cy="10" r="1.6"></circle>
+</svg>
+
+<!-- ================= PHILOSOPHY ================= -->
+<section id="story">
+  <div class="container philosophy">
+    <div>
+      <span class="eyebrow">Our Philosophy</span>
+      <h2>Three Generations,<br>One Flame.</h2>
+      <p>Fornace began in 1962 as a single wood-fired oven behind my grandmother's kitchen in Umbria. Every recipe we serve descends from her notebook — measured not in grams, but in how close the wood sits to the coals.</p>
+      <p>Today our chefs still source within sixty miles: heirloom tomatoes from Alder Hill Farm, flour milled weekly, and live oak cut and cured on-site for eighteen months before it ever touches the hearth.</p>
+      <div class="signature-line">
+        <span class="mark">Marco V.</span>
+        <div class="who">Executive Chef<b>Third generation, Fornace</b></div>
+      </div>
+    </div>
+    <div class="phil-media">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Chef tending the wood-fired oven">
+      <div class="phil-card">
+        <div class="num">64</div>
+        <p>Years the same oven has stayed lit</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section id="experience">
+  <div class="container">
+    <div class="reviews-head">
+      <span class="eyebrow">Word on the Street</span>
+      <h2>Diners &amp; Critics Agree</h2>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>The bistecca alone is worth the drive — char on the outside, impossibly tender within. Service matched the kitchen's confidence.</p>
+        <div class="reviewer"><div><b>Elena R.</b><span>Verified Diner</span></div></div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Every course felt considered. The smoked burrata is the best opening dish I've had in this city, full stop.</p>
+        <div class="reviewer"><div><b>James O.</b><span>Verified Diner</span></div></div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Warm room, low light, and a kitchen that clearly respects fire as an ingredient rather than a technique.</p>
+        <div class="reviewer"><div><b>Priya N.</b><span>Verified Diner</span></div></div>
+      </div>
+    </div>
+    <div class="press-strip">
+      <span>The Local Table</span>
+      <span>Eater</span>
+      <span>Michelin Guide</span>
+      <span>City &amp; Fork</span>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1200 34" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,34 L0,14 L40,26 L82,6 L124,22 L166,10 L208,28 L250,14 L292,24 L334,8 L376,20 L418,12 L460,26 L502,16 L544,24 L586,10 L628,22 L670,14 L712,26 L754,8 L796,20 L838,12 L880,24 L922,16 L964,28 L1006,10 L1048,22 L1090,14 L1132,26 L1174,12 L1200,20 L1200,34 Z"></path>
+  <circle cx="208" cy="28" r="1.8"></circle>
+  <circle cx="460" cy="26" r="2.2"></circle>
+  <circle cx="712" cy="26" r="1.6"></circle>
+  <circle cx="964" cy="28" r="2"></circle>
+</svg>
+
+<!-- ================= LOCATION / RESERVE ================= -->
+<section id="contact">
+  <div class="container">
+    <div class="menu-head" style="margin-bottom:44px;">
+      <div>
+        <span class="eyebrow">Find the Fire</span>
+        <h2>Location &amp; Reservations</h2>
+      </div>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <h3>Hours</h3>
+        <div class="hours-row"><span>Mon – Tue</span><span>Closed</span></div>
+        <div class="hours-row"><span>Wed – Thu</span><span>5:30p – 10p</span></div>
+        <div class="hours-row"><span>Fri – Sat</span><span>5:00p – 11p</span></div>
+        <div class="hours-row"><span>Sunday</span><span>5:00p – 9p</span></div>
+        <div class="addr">
+          <b>Fornace</b>
+          214 Kiln Street, Riverside District<br>
+          Reservations: (555) 013-2247
+        </div>
+      </div>
+      <div class="loc-card map-card">
+        <iframe class="map-embed" loading="lazy" title="Fornace location map"
+          src="https://maps.google.com/maps?q=restaurant&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+      <div class="loc-card">
+        <h3>Request a Table</h3>
+        <form id="reserve-form" onsubmit="return false;">
+          <div class="field-row">
+            <div class="field" style="flex:1;">
+              <label for="r-date">Date</label>
+              <input id="r-date" type="date" required>
+            </div>
+            <div class="field" style="flex:1;">
+              <label for="r-time">Time</label>
+              <select id="r-time" required>
+                <option value="">Select</option>
+                <option>5:30 PM</option>
+                <option>6:00 PM</option>
+                <option>6:30 PM</option>
+                <option>7:00 PM</option>
+                <option>7:30 PM</option>
+                <option>8:00 PM</option>
+                <option>8:30 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="r-guests">Guests</label>
+            <select id="r-guests" required>
+              <option value="">Select party size</option>
+              <option>1 guest</option>
+              <option>2 guests</option>
+              <option>3 guests</option>
+              <option>4 guests</option>
+              <option>5–6 guests</option>
+              <option>7+ guests</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary reserve-btn" id="reserve-submit">Request Table</button>
+          <p class="reserve-note" id="reserve-note">We'll confirm by phone within two hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo">FOR<span>NA</span>CE</a>
+        <p>Wood-fired Italian cooking in the Riverside District. One oven, lit since 1962, still burning.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Yelp">Y</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Reservations</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#">214 Kiln Street</a></li>
+          <li><a href="#">Riverside District</a></li>
+          <li><a href="tel:5550132247">(555) 013-2247</a></li>
+          <li><a href="mailto:table@fornace.co">table@fornace.co</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Stay Warm</h4>
+        <p style="font-size:13px;color:var(--cream-dim);margin-bottom:12px;">First word on new menus, wine dinners, and hearth-side seats.</p>
+        <div class="newsletter-row">
+          <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+          <button type="button" id="newsletter-btn">Join</button>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Fornace Restaurant Group. All rights reserved.</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
