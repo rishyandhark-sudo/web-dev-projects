@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureAuth — Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="auth-page">
+    <div class="auth-card">
+
+      <!-- Logo -->
+      <div class="auth-logo">
+        <span class="logo-mark">SA</span>
+        <span class="logo-text">SecureAuth</span>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="auth-heading">Welcome back!</h1>
+      <p class="auth-subtitle">Login to continue</p>
+
+      <!-- Alert box for success / error messages -->
+      <div id="loginAlert" class="alert-box" role="alert"></div>
+
+      <!-- Login form -->
+      <form id="loginForm" class="auth-form" novalidate>
+
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input
+            type="email"
+            id="loginEmail"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+          />
+          <span class="field-error" id="loginEmailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="loginPassword"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              data-target="loginPassword"
+              aria-label="Show password"
+            >👁</button>
+          </div>
+          <span class="field-error" id="loginPasswordError"></span>
+        </div>
+
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="rememberMe" />
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="link-muted" id="forgotPasswordLink">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary">Login</button>
+
+        <p class="switch-text">
+          Don't have an account?
+          <a href="signup.html" class="link-accent">Sign Up</a>
+        </p>
+
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
