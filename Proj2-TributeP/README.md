@@ -74,7 +74,7 @@ images/screenshot.png
 GitHub Pages:
 
 ```
-https://rishyandhark-sudo.github.io/web-dev-projects/
+https://rishyandhark-sudo.github.io/web-dev-projects/Proj2-TributeP/
 ---
 
 ## 👨‍💻 Author
