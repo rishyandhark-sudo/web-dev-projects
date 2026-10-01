@@ -1,0 +1,155 @@
+:root {
+  --bg: #eef2f7;
+  --surface: #ffffff;
+  --ink: #14213d;
+  --muted: #4c5b78;
+  --line: #d3dbe8;
+  --accent: #2f54eb;
+  --accent-ink: #ffffff;
+  --focus: #2f54eb;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1626; --surface: #172138; --ink: #e8edf8; --muted: #a2afc9;
+    --line: #2a3857; --accent: #7f9bff; --accent-ink: #0f1626; --focus: #9db3ff;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1626; --surface: #172138; --ink: #e8edf8; --muted: #a2afc9;
+  --line: #2a3857; --accent: #7f9bff; --accent-ink: #0f1626; --focus: #9db3ff;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); interpolate-size: allow-keywords; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1.0625rem/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.page {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 3rem);
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 52rem) {
+  .page { grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); align-items: start; }
+  .intro { position: sticky; top: 2.5rem; }
+}
+
+/* Intro */
+h1 {
+  font: 700 clamp(2.4rem, 6vw, 3.75rem)/1.02 var(--display);
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem;
+}
+.intro p { color: var(--muted); margin: 0 0 1.75rem; max-width: 34ch; }
+
+.help {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.25rem 1.25rem 1.35rem;
+}
+.help h2 { font: 600 1.125rem/1.3 var(--display); margin: 0 0 .35rem; }
+.help p { font-size: .975rem; margin: 0 0 1rem; color: var(--muted); }
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  text-decoration: none;
+  padding: .7rem 1.1rem;
+  border-radius: 10px;
+  transition: transform .15s ease, filter .15s ease;
+}
+.button:hover { filter: brightness(1.08); }
+.button:active { transform: translateY(1px); }
+
+/* Accordion */
+.faq { display: grid; gap: .75rem; }
+
+details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  transition: border-color .2s ease;
+}
+details[open] { border-color: var(--accent); }
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.35rem;
+  font: 600 1.15rem/1.35 var(--display);
+  letter-spacing: -0.01em;
+  border-radius: 14px;
+}
+summary::-webkit-details-marker { display: none; }
+summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+/* Plus icon becomes minus when open */
+.icon {
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  position: relative;
+  transition: background .2s ease, border-color .2s ease;
+}
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: .7rem;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+  transition: transform .25s ease, background .2s ease;
+}
+.icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+details[open] .icon { background: var(--accent); border-color: var(--accent); }
+details[open] .icon::before,
+details[open] .icon::after { background: var(--accent-ink); }
+details[open] .icon::after { transform: translate(-50%, -50%) rotate(0deg); }
+
+/* Answer text */
+.answer { padding: 0 1.35rem 1.3rem; color: var(--muted); max-width: 60ch; }
+.answer p { margin: 0 0 .75rem; }
+.answer p:last-child { margin-bottom: 0; }
+.answer a { color: var(--accent); font-weight: 500; }
+.answer a:focus-visible,
+.button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+
+/* Smooth open/close where supported; plain toggle elsewhere */
+@supports (selector(::details-content)) {
+  details::details-content {
+    height: 0;
+    overflow: clip;
+    transition: height .3s ease, content-visibility .3s allow-discrete;
+  }
+  details[open]::details-content { height: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
